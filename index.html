@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Michroma&display=swap" rel="stylesheet">    
+</head>
+<body class="body-">
+    
+    <nav class="navbar bg-black">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="logoHobosAcademy2Banda.png" alt="imagen_logo" class="d-inline-block align-text-top imagen_logo" id="imagen_logo_banda">
+            <img src="logoHobosAcademyLetras.png" alt="imagen_letras" class="d-inline-block align-text-top imagen_letras" id="imagen_logo_letras">
+        </a>
+        </div>
+    </nav>
+    <div class="container contenedor-general">
+
+        <div class= "d-flex flex row " id="contenido">
+            
+                <div class="container bpm-ingresado">
+                    <input type="number" class="bpm-ingresado-input" id="bpm_ingresado" placeholder="BPM">
+                </div>
+                <div class="container">
+                     
+                    <input class= "range-barra" id="barra_rango" type="range" min="10" max="250" value="135" step="1">
+                        
+                </div>
+                <div class="container">
+                    <div>    
+                        <a class="btn btn-primary bg-success botones" id="boton_iniciar" role="button">Iniciar</a>    
+                        <a class="btn btn-primary bg-danger botones" id="boton_detener" role="button">Detener</a>
+                        </div>
+                </div>
+                <div class="container">    
+                    <div class="contenedor-selector-metricas"> 
+                        <label class = "label-metricas" for="metricas">Elige una métrica</label>
+                        <select name="metricas" id= "selector_metricas" class= "form-select">
+                            <option value="0">3/4</option>
+                            <option value="1" selected>4/4</option>
+                            <option value="2">5/4</option>
+                            <option value="3">6/4</option>
+                            <option value="4">7/4</option>
+                        </select>
+                          
+                    </div>
+                    <a class="btn btn-primary botones" id="boton_instrucciones" role="button" href="instrucciones.html">Instrucciones</a>
+                    
+                </div>
+            
+        
+                <div id="metrica_mostrada" class="container">
+            
+                </div>
+        </div>
+        <div class= "d-flex flex row " id="contenido">
+            <div class = "container flex row" id="numeros_aleatorios">
+                <div class="container" id="numeros_aleatorios_generados">
+                    
+                </div>
+                <div class="container">
+                    <a class="btn btn-primary botones" id="boton_numeros_aleatorios_anterior" role="button"> 🢀</a>
+                    <a class="btn btn-primary botones" id="boton_numeros_aleatorios_siguiente" role="button"> 🢂</a>    
+                    <a class="btn btn-primary botones" id="boton_numeros_aleatorios" role="button">Nueva Combinación</a>
+                </div>
+            </div>
+        </div>    
+    </div>
+<script  type ="module" src= "ejecucionMetronomo.js"></script>    
+</body>
+</html>
