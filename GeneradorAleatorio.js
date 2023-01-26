@@ -78,14 +78,14 @@ class GeneradorAleatorioDeNumeros{
     }
 
     generarGrupoDeNumerosAleatorio(cantidadDenumerosAgenerar, cifraMaxima){
-        let cantidadSobrante = cifraMaxima - (this.numerosPendientesPorGenerar(cantidadDenumerosAgenerar));
+        let cantidadSobrante = cifraMaxima - this.numerosPendientesPorGenerar(cantidadDenumerosAgenerar);
         let cantidadEnUso = 0;
         console.log(cantidadSobrante);
         let numeroResultante = 0;
         ;
 
         for( cantidadDenumerosAgenerar ; cantidadDenumerosAgenerar != 0 ; cantidadDenumerosAgenerar -- ){
-            cantidadSobrante = ( cifraMaxima - cantidadEnUso - (this.numerosPendientesPorGenerar(cantidadDenumerosAgenerar)));
+            cantidadSobrante = ( cifraMaxima - cantidadEnUso - this.numerosPendientesPorGenerar(cantidadDenumerosAgenerar));
             console.log(cantidadSobrante + "numero sobrante")
             numeroResultante = this.generarNumeroAleatorio(cantidadSobrante);
             cantidadEnUso += numeroResultante;

@@ -16,10 +16,30 @@ let elMetronomoEstaEnEjecucion = false
 class Botones {
 
     inciar(element) {
-        element.addEventListener('click', () => activarMetronomoInactivo());
+        element.addEventListener('click', () => {
+            activarMetronomoInactivo()
+            element.className = "btn btn-primary botones-animados-success"
+            setTimeout(() => (element.className = "btn btn-primary bg-success botones"), 700 )
+            ;
+        })
     }
+
     detener(element){
-        element.addEventListener('click', () => detenerMetronomoEnEjecucion())
+        element.addEventListener('click', () => {
+            detenerMetronomoEnEjecucion()
+            element.className = "btn btn-primary botones-animados-danger"
+            setTimeout(() => (element.className = "btn btn-primary bg-danger botones"), 700 )
+
+        })
+    }
+
+    instrucciones(element){
+        element.addEventListener('mouseover', () => {
+            element.className = "btn btn-primary botones-animados";
+        });
+        element.addEventListener('mouseout', () => {
+            element.className = "btn btn-primary botones";
+        });
     }
 
     cambiarMetrica(element){
@@ -45,11 +65,16 @@ class Botones {
 
     generarNuevaCombinacionDeNumeros(element){
         element.addEventListener ('click', () => {
-                generadorAleatorio1.generarGrupoDeNumerosAleatorio(4,generadorAleatorio1.getCifraMaxima());
-                document.querySelector("#numeros_aleatorios_generados").innerHTML = "" ;
-                generadorAleatorio1.mostrarGrupoDeNumerosAleatorios();
-                BOTON_COMBINACIÓN_ALEATORIA_SIGUIENTE.className = "btn btn-primary botones";
-                BOTON_COMBINACIÓN_ALEATORIA_ANTERIOR.className = "btn btn-primary botones";
+                setTimeout(() => (
+                generadorAleatorio1.generarGrupoDeNumerosAleatorio(4,generadorAleatorio1.getCifraMaxima()),
+                document.querySelector("#numeros_aleatorios_generados").innerHTML = "", 
+                generadorAleatorio1.mostrarGrupoDeNumerosAleatorios(),
+                BOTON_COMBINACIÓN_ALEATORIA_SIGUIENTE.className = "btn btn-primary botones",
+                BOTON_COMBINACIÓN_ALEATORIA_ANTERIOR.className = "btn btn-primary botones"
+                ), 700);
+                 
+                element.className = "btn btn-primary botones-animados"
+                setTimeout(() => (element.className = "btn btn-primary botones"), 700 );
             }
         )
     }
@@ -91,6 +116,7 @@ class Botones {
 const botones = new Botones();
 botones.inciar(botonInicio);
 botones.detener(botonDetener);
+botones.instrucciones(botoninstrucciones);
 botones.cambiarMetrica(selectorMetricas);
 botones.cambiarBPM(bpmIngresado);
 botones.cambiarBPMRange(barraDeslizadora);
