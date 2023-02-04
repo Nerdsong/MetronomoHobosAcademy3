@@ -33,26 +33,27 @@
                 </div>
                 <div class="container">
                     <div>    
+                        <input class= "volumen" id="barra_rango_volumen" type="range" min="0" max="100" value="100" step="1">
+
                         <a class="btn btn-primary bg-success botones" id="boton_iniciar" role="button">Iniciar</a>    
                         <a class="btn btn-primary bg-danger botones" id="boton_detener" role="button">Detener</a>
-                        </div>
+                    </div>
                 </div>
                 <div class="container">    
                     <div class="contenedor-selector-metricas"> 
                         <label class = "label-metricas" for="metricas">Elige una métrica</label>
                         <select name="metricas" id= "selector_metricas" class= "form-select">
-                            <option value="0">3/4</option>
-                            <option value="1" selected>4/4</option>
-                            <option value="2">5/4</option>
-                            <option value="3">6/4</option>
-                            <option value="4">7/4</option>
+                            <option value="3">3/4</option>
+                            <option value="4" selected>4/4</option>
+                            <option value="5">5/4</option>
+                            <option value="6">6/4</option>
+                            <option value="7">7/4</option>
                         </select>
                           
                     </div>
                     <a class="btn btn-primary botones" id="boton_instrucciones" role="button" href="instrucciones.html">Instrucciones</a>
                     
                 </div>
-            
         
                 <div id="metrica_mostrada" class="container">
             
@@ -64,19 +65,11 @@
                     
                 </div>
                 <div class="container">
-                    <label class = "label-metricas" for="numeroMaximo">Numero Maximo</label>
-                        <select name="numeroMaximo" id= "selector_numero_maximo" class= "form-select">
-                            <option value="13" selected>TODAVIA NO SIRVE</option>
-                            <option value="13">13</option>
-                            <option value="12">12</option>
-                            <option value="11">11</option>
-                            <option value="10">10</option>
-                            <option value="9">9</option>
-                            <option value="8">8</option>
-                            <option value="7">7</option>
-                            <option value="6">6</option> 
-                            <option value="5">5</option>
-                            <option value="4">4</option>
+                    <label class = "label-metricas" for="numeroMaximo">Selecciona subdivisión</label>
+                        <select name="numeroMaximo" id= "tresillos_o_semis" class= "form-select">
+                            <option value selected ="0">Semi-corcheas</option>
+                            <option value="1">Tresillos</option>
+                            
                         </select>
                     <a class="btn btn-primary botones" id="boton_numeros_aleatorios_anterior" role="button"> 🢀</a>
                     <a class="btn btn-primary botones" id="boton_numeros_aleatorios_siguiente" role="button"> 🢂</a>    

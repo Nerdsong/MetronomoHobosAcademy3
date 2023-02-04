@@ -6,7 +6,7 @@ class Metricas {
     seisOctavos = [1,0,0,0,0,0];
     sieteOctavos = [1,0,0,0,0,0,0];
     metricas = [this.tresCuartos,this.cuatroCuartos,this.cincoCuartos,this.seisOctavos, this.sieteOctavos];
-    metricaSeleccionada = ""
+    metricaSeleccionada = 4;
     metricaMostrandose= false;
 
     /**
@@ -27,7 +27,7 @@ class Metricas {
 
 
     getMetricaSeleccionada(){
-        this.metricaSeleccionada = this.metricas[document.querySelector("#selector_metricas").value];
+        this.metricaSeleccionada = this.metricas[document.querySelector("#selector_metricas").value - 3 ];
         return this.metricaSeleccionada
     }
 

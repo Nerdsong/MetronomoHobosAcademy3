@@ -9,6 +9,7 @@ class Metronomo{
     #posicionEnVector = 0;
     #sonidoTic = new Audio ('./Sonidos/tic.mp3')
     #sonidoTac = new Audio ('./Sonidos/tac.mp3')
+    #volumen = 1;
     #minutoEnMilisegundos = 60000;
 
 
@@ -58,7 +59,13 @@ class Metronomo{
     sonarTac(){
         this.#sonidoTac.play()
     }
-    
+
+
+    subirBajarVolumen(valor){
+        this.#volumen = valor / 100;
+        this.#sonidoTac.volume = this.#volumen;
+        this.#sonidoTic.volume = this.#volumen;
+    }
     /**
      * Ejecuta el metronomo recorriendo todo el vector, avanza 1 espacio en cada ejecución.
      *  al llegar al final del vector vuelve al inicio. 

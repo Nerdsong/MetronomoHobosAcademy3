@@ -146,6 +146,13 @@ input[type="range"]::-ms-fill-upper {
   width: 20rem;
 }
 
+.volumen{
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+    width: 10rem!important;
+    background: rgb(230, 70, 21)!important;
+}
+
 .container {
   display: flex;
   align-items: center;
